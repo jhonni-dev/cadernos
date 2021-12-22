@@ -38,7 +38,6 @@
 - dotnet --new (cria um novo projeto ou arquivo do .NET)
 - dotnet --nuget é um gerenciador de pacotes para .NET
 
-## Aula 3
 ### Criando uma aplicação console
 + **Criar uma aplicação console:** dotnet new console -n <nome da aplicação>  
 + explorer . : abre o local onde o terminal está rodando no windows explorer
@@ -51,3 +50,36 @@
   + Para funcionar o comando run, é preciso estar no mesmo nível de pastas do arquivo .csproj
 + Para dar um **build** fora do diretório onde está o arquivo .cdproj, é preciso especificar o diretório do arquivo, caso haja apenas um arquivo deste tipo na pasta
 + Para dar um **run** fora do diretório onde está o arquivo .cdproj, é preciso usar a flag -p **(ou --project no caso do .NET 6)** e especificar o diretório do arquivo
+
+## Aula 3
+### Conhecendo o C#
++ C# é uma linguagem elegante, orientada a obejtos e fortemente tipada
++ a sintaxe é similar a do C, C++ ou Java
++ Suporta os conceitos de encapsulamento, herança e polimorgismo (oo)
++ Os programas C# são executados no .NET, que inclui:
+  + CLR *(Common Language Runtime)
+  + Conjunto unificado de bibliotecas de classes
++ Atualmente o compilador do C# é o **Roslyn**
+
+### Como funciona
++ O código-fonte escrito em C# é compilado em uma linguagem intermediária (IL)
++ O código e os recursos de IL sçao armazenados no disco em um arquivo executável chamado **assembly**, geramente com uma extensçai .exe ou .dll
++ Quando o programa C# é executado, o assembly é carregado no CLR
++ Em seguida, o CLR executará a compilação ***just in time*** (JIT) para converter o código IL em instruções de máquina nativas
++ O CLR também fornece outros serviços:
+  + *Garbage Collector*
+  + *Exception Handler*
+  + *Resources Manager*
++ Além dos serviços de tempo de execução, o .NET também inclui uma extensa biblioteca com milhares de classes que fornecem uma ampla variedade de funcionalidades úteis, desde entrada e  saída de arquivos, manipulação de cadeias de caracteres, análise XML, etc...
+
+### Estrutura de programa
++ Os principais conceitos organizacionais em C# são:
+  + programas
+  + *namespaces*
+  + tipos
+  + membros
+  + *assemblies*
++ Programas C# consistem em um ou mais arquivos
++ Os programas declaram **tipos**, que  contêm **membros** e podem ser organizados em *namespaces*
+  + Exemplos de tipos: Classes e interfaces
+  + Exemplos de membros: Campos, métodos, propriedades e eventos
