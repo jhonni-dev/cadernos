@@ -83,3 +83,37 @@
 + Os programas declaram **tipos**, que  contêm **membros** e podem ser organizados em *namespaces*
   + Exemplos de tipos: Classes e interfaces
   + Exemplos de membros: Campos, métodos, propriedades e eventos
+
+## Aula 4
+### Tipos e Variáveis
++ Variáveis de tipos de valor contêm diretamente seus dados
++ As variáveis têm sua própria cópia dos dados e não é possível que as operações afetem outra variável (exceto no caso das variáveis de parâmetro *ref* e *out*)
++ Tipos **numéricos**: sbyte, short, int, long, byte, ushort, uint, ulong
++ Tipo **Caractere Unicode**: char
++ Ipos **Pontos Flutuantes**: float, double, decimal
++ Ipo **Booleano**: bool
++ Outros Tipos: enum, struct e nullable (exemplo int?)
++ Tipos de **Referência**: Variáveis de tipos de referência aramazenam referências a seus dados
+  + É possível que duas variáveis façam referência ao mesmo objeto em, portanto, que operações em uma variável afetem o objeto referenciado pela outra variável.
+  + Tipos **Classe**: class, object, string
+  + Tipos **Arrays**: int[], int[,], etc...
+  + interface, delegate
+
+### Instruções:
++ Ações de um programa são expressas usando instruções 
++ Um bloco (escrito dentro de chaves {}), permite que várias instruções sejam escritas em contextos
++ Tipos de instruções:
+  + Declaração de variáveis e constantes
+  + Condicionais: *if, switch*
+  + Laços de Repetição: *while, o*, for, foreach*
+  + Auxiliares: *break, continue, return*
+  + Tratativas de exceções: *throw, try.. catch.. finally*
+  + Importar referências de pacotes e *namespaces: using* 
++ Comando *Dispose*: Elimina da memória os objetos não gerenciáveis
++ Para eliminar os objetos gerenciáveis, como classes e objetos, utiliza-se o *garbage collector*
+
+### Array
++ Um **array** é uma estrutura de dados que contém um número X de **elementos**, todos do mesmo **tipo**, que são acessados através de **índices** computados
++ *Arrays* são tipos de referências e a declaração de uma variável *array* simplesmente reserva espaço para uma **referência** de uma instância de *array*
++ Ao criar um *array* é especificado o **tamanho** da nova instância, que é fixo durante todo o tempo de vida da instância
++ Os índices dos elementos de um *array* variam de **0** a **comprimento do array -1**
