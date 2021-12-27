@@ -117,3 +117,21 @@
 + *Arrays* são tipos de referências e a declaração de uma variável *array* simplesmente reserva espaço para uma **referência** de uma instância de *array*
 + Ao criar um *array* é especificado o **tamanho** da nova instância, que é fixo durante todo o tempo de vida da instância
 + Os índices dos elementos de um *array* variam de **0** a **comprimento do array -1**
+
+## Aula 5
+### Classes e Objetos
++ Classes são os tipos mais fundamentais de C#
++ Uma classe é uma estrutura de dados que combina estado (campos) e ações (métodos)
++ Objetos são instâncias de uma classe
++ As classes suportam herança e polimorfismo, mecanismos pelos quais as classes derivadas podem estender e especializar as classes-base
++ Instâncias de classes (objetos) são criadas usando o operador new, que aloca memória para uma instância, chama um  construtor para inicializar a instância e retorna uma referência à instância
++ A memória ocupada por um objeto é recuperada automaticamente quando o objeto não estpa mais acessível. Não é necessário nem possível desalocar explicitamente objetos em C#
++ Os membros de uma classe podem ser estáticos ou membros da instância
++ Membros estáticos pertencem a classe e membros da instância pertencem ao objeto
++ São membros: constantes, variáveis, métodos, propriedades, construtores, etc
++ Cada membro de uma classe tem uma acessibilidade associadad, que controla as regiões do texto do programa que podem acessar o membro
++ Os tipos de acessibilidade podem ser: *public, protected, internal, private*
++ Uma declaração de classe pode especificar uma classe base, herdando os membro *public, internal e protected* da classe base
++ Omitir uma especificação de classe base é o mesmo que derivar do tipo object
++ Um método é um membro que implementa uma computação ou ação que pode ser executada por um objeto ou classe
++ Os métodos podem ter uma lista de parâmetros, que representam valores ou referências de variáveis passados para o método, e um tipo de retorno, que especifica o tipo do valor calculado e retornado pelo método
