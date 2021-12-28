@@ -1,7 +1,7 @@
 # Aula .NET do bootcamp Avanade #2
 *Primeiros passos com .NET*
 
-##Aula 1
+## Aula 1
 ### O que é .NET?
 - .Net é uma **infraestrutura** para desenvolvimento de software criada pela Microsoft
 - Uma aplicação .NET é desenvolvida para e roda em uma das seguintes **impementações** do .NET:
@@ -135,3 +135,25 @@
 + Omitir uma especificação de classe base é o mesmo que derivar do tipo object
 + Um método é um membro que implementa uma computação ou ação que pode ser executada por um objeto ou classe
 + Os métodos podem ter uma lista de parâmetros, que representam valores ou referências de variáveis passados para o método, e um tipo de retorno, que especifica o tipo do valor calculado e retornado pelo método
+
+## Aula 6
+### Structs
++ Como as classes, as *structs* são **estruturas de dados** que podem conter membros de dados e membros de ação, mas diferentemente das classes, as *structs* são tipos de valor e não requerem alocação de heap
++ Uma variável de um tipo de *struct* armazena diretamente os dados da estrutura, enquanto uma variável de um tipo de classe armazena uma referência a um objeto alocado na memória
++ *Structs* não aceitam herança determinada pelo desenvolvedor
++ São úteis para pequenas estruturas de dados que possuem semântica de valor como: números complexos, pontos em um sistema de coordenadas ou pares de chave-valor em um dicionário são bons exemplos de utilização
++ O uso de *structs* em vez de classes para pequenas estruturas de dados pode fazer uma grande diferença no número de alocações de memória 
++ Construtores de *structs* são chamados com o operador ***new***, semelhante a um construtor de classe, mas em vez de alocar dinamicamente um objeto no *heap* gerenciado e retornar uma referência a ele, um contrutor *struct* simplesmente retorna o próprio valor *struct* (normalmente em um local temporário na stack), e esse valor é copiado conforme necessário
++ www.eximiaco.tech/pt/category/fundamentos
+
+### Interfaces
++ Uma interface define um contrato que pode ser implementado por classes e *structs*
++ Uma interface pode conter métodos, propriedades, eventos e indexadores
++ Uma interface não fornece implementações dos membros que define - apenas suas "assinaturas"
++ As interfaces podem empregar herança múltipla
+
+### Enums
++ Um *enum* é um tipo de valor distinto com um conjunto de constantes nomeadas
++ Você define enumerações quando preciso definir um tipo que pode ter um conjunto de valores discretos. Eles usam um dos tipos de valor integral como armazenamento subjacente. Eles fornecem significado semântico aos valores discretos.
++ Cada tipo de *enum* possui um tipo integral correspondente chamado **tipo subjacente do tipo de *enum***
++ Um tipo de enumeração que não declara explicitamente um tipo subjacente tem um tipo subjacente *int*
