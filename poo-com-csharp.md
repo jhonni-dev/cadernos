@@ -68,3 +68,27 @@
 + A classe **System.Object** é a mãe de todas as classes na hierarquia do .NET
 + Todas as classes derivam, direta ou indiretamente da classe Object e ela tem como objetivo prover serviços de baixo nível para suas classes filhas, principalmente para operações com referência de memória, comparações, etc
 + É possível reescrever os métodos da classe Object usando o comando "public override ..."
+
+## Aula 7
+### Interfaces
++ Uma interface é um contrato que pode ser implementado por uma classe.
++ É como se fosse uma classe abstrata, podendo definir métodos abstratos para serem implementados.
++ Assim como uma classe abstrata, uma interface **não pode ser instanciada**
++ É possível definir os métodos diretamente na interface, tornando opcional implementar na classe
+
+## Aula 8
+### Arquivos
++ O C# nos apresenta algumas **classes estáticas** (não é preciso instaciá-las) que facilitam o trabalho com arquivos, dentre elas
+  + **File** (Manipular arquivos)
+    + Listar arquivos: Directory.GetFiles()
+    + Criar arquivo de texto: File.WriteAllText()
+    + Testa se arquivo existe(retorna true ou false): File.Exists()
+    + Criar arquivo texto com stream:
+  + **Directory** (Operações com diretórios)
+    + Listar diretórios: Directory.GetDirectories()
+    + Criar diretórios: Directory.CreateDirectory()
+    + Apagar diretório: Directory.Delete()
+      + Se tentar apagar um diretório que não está vazio, será apresentado um erro. Para validar que você quer de fato excluir um diretório que contém arquivos é preciso criar uma variável do tipo **bool** dentro do método e setá-la como **true**
+      + Nâo é possível recuperar os arquivos depois de apagar um diretório pelo .NET
+  + **Path** (Organizar os caminhos de maneira lógica)
+    + Organizar os diretórios em pastas e subpastas: Path.Combine()
