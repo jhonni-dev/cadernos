@@ -83,7 +83,22 @@
     + Listar arquivos: Directory.GetFiles()
     + Criar arquivo de texto: File.WriteAllText()
     + Testa se arquivo existe(retorna true ou false): File.Exists()
-    + Criar arquivo texto com stream:
+    + Criar arquivo texto com stream: File.CreateText()
+      + Quando se usa uma stream, a gente coloca ela em memória e prepara para ser escrita. Dessa forma, quando termina de usar o arquivo ele tem que ser encerrado para liberar espaço na memória.
+      + Para tal usá-se o *using*, que garante o arquivo seja liberado para outro processo poder trabalhar
+      + Para criar uma lista de string:List\<string>\ {} // OBS: as barras são para ignorar as tags neste arquivo MD
+    + **Adicionar novas linhas em um arquivo:**
+      + **Sem stream:** File.AppendAllText()
+      + **Com stream:** File.AppendText()
+    + **Ler arquivos:** 
+      + **Sem stream:** File.ReadAllLines()
+      + **Com stream:** (var).ReadLine() //É preciso usar o *using*
+    + **Mover arquivos:** File.Move(local, destino)
+      + É possível renomear o arquivo ao movê-lo, basta apenas inserir um terceiro parâmetro logo após o destino.
+      + Não é permitido sobrescrever um arquivo com o mesmo nome a menos que seja forçado através de um *true* no terceiro parâmetro)
+    + **Copiar arquivos:** File.Copy(local, destino)
+      + Não é permitido sobrescrever um arquivo com o mesmo nome a menos que seja forçado através de um *true* no terceiro parâmetro)
+    + **Deletar arquivo:** File.Delete()
   + **Directory** (Operações com diretórios)
     + Listar diretórios: Directory.GetDirectories()
     + Criar diretórios: Directory.CreateDirectory()
